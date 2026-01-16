@@ -1,21 +1,19 @@
 import 'package:http/http.dart' as http;
-import 'dart:convert';
 
-var endpoint = 'https://ghibliapi.vercel.app/films';
+const ENDPOINT = 'https://ghibliapi.vercel.app/films/';
 
-// fetches a film given a certain id from the ghibli API. Returns a decoded json dynamic
+// Given a film ID, fetch the JSON data, decode it,
+// and return the dynamic object representing that film
 Future<dynamic> getFilmByID(String id) async {
-  // TODO: Error handling for random failures
-  // TODO: Error handling for incorrect codes
+  // TODO: Parse the endpoint string into a URI
 
-  // Parse the endpoint and add the id of the film we want
-  var uri = Uri.parse('$endpoint/$id');
+  // TODO: Fetch the endpoint json data
 
-  // fetch the data
-  var response = await http.get(uri);
+  // TODO: Decode the json data
 
-  // decodes the film into a dynamic object
-  var jsonFilm = jsonDecode(response.body);
+  // TODO: return the dynamic object
 
-  return jsonFilm;
+  // TODO: Error handling of general errors
+
+  // TODO: Error handling of status code errors
 }
