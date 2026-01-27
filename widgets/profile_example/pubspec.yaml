@@ -19,3 +19,11 @@ flutter:
   uses-material-design: true
   assets:
     - assets/images/
+  fonts:
+    - family: DynaPuff
+      fonts:
+        - asset: assets/fonts/DynaPuff-Regular.ttf
+        - asset: assets/fonts/DynaPuff-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/DynaPuff_Condensed-Regular.ttf
+          style: italic

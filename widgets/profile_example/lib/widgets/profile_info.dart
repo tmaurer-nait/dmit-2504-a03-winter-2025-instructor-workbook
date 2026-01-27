@@ -14,7 +14,11 @@ class ProfileInfo extends StatelessWidget {
           padding: const EdgeInsets.only(right: 8),
           child: Text(
             '$label:',
-            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+            style: TextStyle(
+              fontWeight: FontWeight.normal,
+              fontSize: 20,
+              fontFamily: 'DynaPuff',
+            ),
           ),
         ),
         Text(value, style: TextStyle(fontSize: 20)),

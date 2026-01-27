@@ -29,7 +29,11 @@ class ProfilePage extends StatelessWidget {
           children: [
             Text(
               'Employee Profile',
-              style: TextStyle(fontSize: 36.0, fontWeight: FontWeight.bold),
+              style: TextStyle(
+                fontSize: 36.0,
+                fontWeight: FontWeight.bold,
+                color: Theme.of(context).primaryColor,
+              ),
             ),
             ProfileImage(),
             _buildInfoSection(),
