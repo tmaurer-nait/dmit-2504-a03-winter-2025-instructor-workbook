@@ -8,16 +8,27 @@ class ProfileImage extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        ClipOval(
-          child: Image(
-            image: AssetImage('assets/images/patrick_star.png'),
-            height: 250,
-            width: 250,
+        Container(
+          width: 250,
+          height: 250,
+          decoration: BoxDecoration(
+            shape: BoxShape.circle,
+            color: Colors.blue,
+            image: DecorationImage(
+              fit: BoxFit.cover,
+              image: AssetImage('assets/images/patrick_star.png'),
+            ),
+            border: Border.all(width: 4, color: Colors.pink),
           ),
         ),
         Text(
           'Patrick Star',
-          style: TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold),
+          style: TextStyle(
+            fontSize: 24.0,
+            fontWeight: FontWeight.bold,
+            fontStyle: FontStyle.italic,
+            color: Colors.pink,
+          ),
         ),
       ],
     );
