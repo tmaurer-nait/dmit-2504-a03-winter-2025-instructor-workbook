@@ -1117,6 +1117,437 @@
       "originalText": "helper function\n\n(in dogImage Widget)",
       "autoResize": true,
       "lineHeight": 1.25
+    },
+    {
+      "id": "sV6SeWe2_tLEtAoBp0Iql",
+      "type": "text",
+      "x": 701.4006011599586,
+      "y": 764.7672434750207,
+      "width": 513.183837890625,
+      "height": 210,
+      "angle": 0,
+      "strokeColor": "#f08c00",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "aV",
+      "roundness": null,
+      "seed": 1868773695,
+      "version": 106,
+      "versionNonce": 1233904401,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1769634443554,
+      "link": null,
+      "locked": false,
+      "text": "Lifecycle:\n\n1. Create the widget -> constructor()\n2. build()\n3. initState()\n4. build()",
+      "fontSize": 28,
+      "fontFamily": 5,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "Lifecycle:\n\n1. Create the widget -> constructor()\n2. build()\n3. initState()\n4. build()",
+      "autoResize": true,
+      "lineHeight": 1.25
+    },
+    {
+      "id": "z55CniBzQZ7oKy7wXdyRe",
+      "type": "freedraw",
+      "x": 690.7049311683292,
+      "y": 849.9580982287874,
+      "width": 57.095380510602695,
+      "height": 2.518877301897305,
+      "angle": 0,
+      "strokeColor": "#1971c2",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "aW",
+      "roundness": null,
+      "seed": 2019753663,
+      "version": 7,
+      "versionNonce": 1314169425,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1769634446447,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -10.79903738839289,
+          -1.6921561104910552
+        ],
+        [
+          -26.506696428571445,
+          -2.518877301897305
+        ],
+        [
+          -46.348005022321445,
+          -2.518877301897305
+        ],
+        [
+          -57.095380510602695,
+          -2.518877301897305
+        ],
+        [
+          -57.095380510602695,
+          -2.518877301897305
+        ]
+      ],
+      "pressures": [],
+      "simulatePressure": true,
+      "lastCommittedPoint": [
+        -57.095380510602695,
+        -2.518877301897305
+      ]
+    },
+    {
+      "id": "HLjBx3mMtmqw0POxvQ-r9",
+      "type": "text",
+      "x": 369.18742279779326,
+      "y": 831.8789181925151,
+      "width": 285.2918395996094,
+      "height": 140,
+      "angle": 0,
+      "strokeColor": "#1971c2",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "aY",
+      "roundness": null,
+      "seed": 324627455,
+      "version": 175,
+      "versionNonce": 2046496351,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1769634500252,
+      "link": null,
+      "locked": false,
+      "text": "_dogImageUrl = ''\n_dogImageUrl = ''\nloads the dog\n_dogImageUrl = 'real'",
+      "fontSize": 28,
+      "fontFamily": 5,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "_dogImageUrl = ''\n_dogImageUrl = ''\nloads the dog\n_dogImageUrl = 'real'",
+      "autoResize": true,
+      "lineHeight": 1.25
+    },
+    {
+      "id": "dt3Zcp9lI4f9w-ny12zRZ",
+      "type": "freedraw",
+      "x": 698.9720558893113,
+      "y": 921.8827110915106,
+      "width": 114.13892473493297,
+      "height": 4.17236328125,
+      "angle": 0,
+      "strokeColor": "#1971c2",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "aa",
+      "roundness": null,
+      "seed": 1185464049,
+      "version": 11,
+      "versionNonce": 1759895871,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1769634504791,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -3.358503069196445,
+          -0.03875732421875
+        ],
+        [
+          -18.239484514508945,
+          -0.03875732421875
+        ],
+        [
+          -36.427263532366055,
+          -0.03875732421875
+        ],
+        [
+          -62.055620465959805,
+          -0.03875732421875
+        ],
+        [
+          -81.89688546316961,
+          -2.5189208984375
+        ],
+        [
+          -95.12438092912942,
+          -3.34564208984375
+        ],
+        [
+          -112.48548235212047,
+          -4.17236328125
+        ],
+        [
+          -114.13892473493297,
+          -4.17236328125
+        ],
+        [
+          -114.13892473493297,
+          -4.17236328125
+        ]
+      ],
+      "pressures": [],
+      "simulatePressure": true,
+      "lastCommittedPoint": [
+        -114.13892473493297,
+        -4.17236328125
+      ]
+    },
+    {
+      "id": "aUGkZCjttAbrqob5aJrlD",
+      "type": "freedraw",
+      "x": 594.8054037548246,
+      "y": 907.0017732427384,
+      "width": 36.375645228794724,
+      "height": 22.32142857142844,
+      "angle": 0,
+      "strokeColor": "#1971c2",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "ab",
+      "roundness": null,
+      "seed": 1079191569,
+      "version": 19,
+      "versionNonce": 164562591,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1769634505473,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -2.531825474330276,
+          -0.03875732421875
+        ],
+        [
+          -5.838710239955276,
+          0.7879638671875
+        ],
+        [
+          -14.932599748883831,
+          3.26812744140625
+        ],
+        [
+          -25.679975237165195,
+          5.748291015625
+        ],
+        [
+          -33.12042236328125,
+          7.4017333984375
+        ],
+        [
+          -34.77386474609375,
+          8.22845458984375
+        ],
+        [
+          -34.77386474609375,
+          9.055132184709692
+        ],
+        [
+          -32.293701171875,
+          11.535295758928442
+        ],
+        [
+          -25.679975237165195,
+          14.842180524553442
+        ],
+        [
+          -20.71964808872758,
+          16.49562290736594
+        ],
+        [
+          -14.932599748883831,
+          18.14906529017844
+        ],
+        [
+          -8.318830217633831,
+          19.80250767299094
+        ],
+        [
+          -4.185267857142776,
+          20.62922886439719
+        ],
+        [
+          -0.8783830915177759,
+          22.28267124720969
+        ],
+        [
+          0.7750592912947241,
+          22.28267124720969
+        ],
+        [
+          1.601780482700974,
+          22.28267124720969
+        ],
+        [
+          1.601780482700974,
+          22.28267124720969
+        ]
+      ],
+      "pressures": [],
+      "simulatePressure": true,
+      "lastCommittedPoint": [
+        1.601780482700974,
+        22.28267124720969
+      ]
+    },
+    {
+      "id": "mZ22MjJtfcYXz50TNXbez",
+      "type": "freedraw",
+      "x": 739.4813506716773,
+      "y": 934.2835289626044,
+      "width": 214.0686907087054,
+      "height": 3.306884765625,
+      "angle": 0,
+      "strokeColor": "#1971c2",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "ah",
+      "roundness": null,
+      "seed": 995651281,
+      "version": 11,
+      "versionNonce": 1920387935,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1769634519401,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          4.081944056919724,
+          -0.03875732421875
+        ],
+        [
+          18.962838309151834,
+          -0.03875732421875
+        ],
+        [
+          47.89803641183039,
+          -0.03875732421875
+        ],
+        [
+          84.273681640625,
+          0.7879638671875
+        ],
+        [
+          133.87686593191972,
+          0.7879638671875
+        ],
+        [
+          176.86628069196433,
+          2.44140625
+        ],
+        [
+          209.93512834821433,
+          3.26812744140625
+        ],
+        [
+          214.0686907087054,
+          3.26812744140625
+        ],
+        [
+          214.0686907087054,
+          3.26812744140625
+        ]
+      ],
+      "pressures": [],
+      "simulatePressure": true,
+      "lastCommittedPoint": [
+        214.0686907087054,
+        3.26812744140625
+      ]
+    },
+    {
+      "id": "ds-J1CSFhyCSnGSXmkBy6",
+      "type": "text",
+      "x": -553.5991318112328,
+      "y": 552.8182846693915,
+      "width": 464.183837890625,
+      "height": 350,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "ai",
+      "roundness": null,
+      "seed": 1020251601,
+      "version": 118,
+      "versionNonce": 8363679,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1769634700415,
+      "link": null,
+      "locked": false,
+      "text": "Ternary\n\ncondition ? true case : false case;\n\nsame as \nif (condition){\n    true case\n} else {\n    false case\n}",
+      "fontSize": 28,
+      "fontFamily": 5,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "Ternary\n\ncondition ? true case : false case;\n\nsame as \nif (condition){\n    true case\n} else {\n    false case\n}",
+      "autoResize": true,
+      "lineHeight": 1.25
     }
   ],
   "appState": {

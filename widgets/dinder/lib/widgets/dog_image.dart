@@ -26,8 +26,40 @@ class _DogImageState extends State<DogImage> {
     return jsonDecode(res.body)['message'];
   }
 
+  // Helper function to update the dog image
+  void loadNewDog() {
+    setState(() {
+      _dogImageUrl = '';
+    });
+    // Fetch dog url using other helper function
+    getRandomDogUrl().then((newDogUrl) {
+      // call set state to trigger a redraw
+      setState(() {
+        // update the dog url inside of setState
+        _dogImageUrl = newDogUrl;
+      });
+    });
+  }
+
+  @override
+  void initState() {
+    super.initState();
+
+    loadNewDog();
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Column(children: [Image.network(_dogImageUrl)]);
+    return Column(
+      children: [
+        _dogImageUrl.isEmpty
+            ? SizedBox(
+                height: 600,
+                child: Center(child: CircularProgressIndicator()),
+              )
+            : Image.network(_dogImageUrl, height: 600),
+        ElevatedButton(onPressed: loadNewDog, child: Text('Go Fetch!')),
+      ],
+    );
   }
 }
