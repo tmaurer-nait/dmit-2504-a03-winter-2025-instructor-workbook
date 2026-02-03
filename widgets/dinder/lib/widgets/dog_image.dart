@@ -53,16 +53,49 @@ class _DogImageState extends State<DogImage> {
     loadNewDog();
   }
 
+  // helper build method to make the actual build cleaner to read
+  Widget _buildImage() {
+    return _dogImageUrl.isEmpty
+        ? SizedBox(
+            height: 600,
+            child: Center(child: CircularProgressIndicator()),
+          )
+        : GestureDetector(
+            onDoubleTap: () {
+              setState(() {
+                _likes++;
+              });
+              loadNewDog();
+            },
+            onLongPress: () {
+              setState(() {
+                _dislikes++;
+              });
+              loadNewDog();
+            },
+            onHorizontalDragEnd: (DragEndDetails details) {
+              if (details.primaryVelocity != null &&
+                  details.primaryVelocity! > 0) {
+                setState(() {
+                  _likes++;
+                });
+                loadNewDog();
+              } else {
+                setState(() {
+                  _dislikes++;
+                });
+                loadNewDog();
+              }
+            },
+            child: Image.network(_dogImageUrl, height: 600, fit: BoxFit.cover),
+          );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        _dogImageUrl.isEmpty
-            ? SizedBox(
-                height: 600,
-                child: Center(child: CircularProgressIndicator()),
-              )
-            : Image.network(_dogImageUrl, height: 600, fit: BoxFit.cover),
+        _buildImage(),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
