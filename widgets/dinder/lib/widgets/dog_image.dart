@@ -12,7 +12,10 @@ class DogImage extends StatefulWidget {
 }
 
 class _DogImageState extends State<DogImage> {
+  // Stateful variables
   var _dogImageUrl = '';
+  var _likes = 0;
+  var _dislikes = 0;
 
   // Normally we would put this in a services file
   Future<String> getRandomDogUrl() async {
@@ -33,6 +36,8 @@ class _DogImageState extends State<DogImage> {
     });
     // Fetch dog url using other helper function
     getRandomDogUrl().then((newDogUrl) {
+      // Make sure the widget is still in the tree at the end of the async call
+      if (!mounted) return;
       // call set state to trigger a redraw
       setState(() {
         // update the dog url inside of setState
@@ -57,7 +62,38 @@ class _DogImageState extends State<DogImage> {
                 height: 600,
                 child: Center(child: CircularProgressIndicator()),
               )
-            : Image.network(_dogImageUrl, height: 600),
+            : Image.network(_dogImageUrl, height: 600, fit: BoxFit.cover),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            Text(
+              'Likes: $_likes',
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+            Text(
+              'Dislikes: $_dislikes',
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+          ],
+        ),
+        ElevatedButton(
+          onPressed: () {
+            setState(() {
+              _dislikes++;
+            });
+            loadNewDog();
+          },
+          child: Text('Dislike'),
+        ),
+        ElevatedButton(
+          onPressed: () {
+            setState(() {
+              _likes++;
+            });
+            loadNewDog();
+          },
+          child: Text('Like'),
+        ),
         ElevatedButton(onPressed: loadNewDog, child: Text('Go Fetch!')),
       ],
     );
