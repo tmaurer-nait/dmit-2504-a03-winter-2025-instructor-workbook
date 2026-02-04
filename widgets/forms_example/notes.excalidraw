@@ -1,0 +1,200 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "https://marketplace.visualstudio.com/items?itemName=pomdtr.excalidraw-editor",
+  "elements": [
+    {
+      "id": "CbzTQcaORyVkOV8ciuuEu",
+      "type": "text",
+      "x": 274.34173583984375,
+      "y": 131.3928680419922,
+      "width": 655.9278564453125,
+      "height": 70,
+      "angle": 0,
+      "strokeColor": "#e03131",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "a0",
+      "roundness": null,
+      "seed": 1705163369,
+      "version": 95,
+      "versionNonce": 255350375,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1770236594082,
+      "link": null,
+      "locked": false,
+      "text": "NOTE: I am going to do everything\nin the main file. THIS IS BAD. DON'T DO THIS",
+      "fontSize": 28,
+      "fontFamily": 5,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "NOTE: I am going to do everything\nin the main file. THIS IS BAD. DON'T DO THIS",
+      "autoResize": true,
+      "lineHeight": 1.25
+    },
+    {
+      "id": "r3nDnEMnr7caGnAR0UBg3",
+      "type": "text",
+      "x": 460.8172535672411,
+      "y": 271.4391632080078,
+      "width": 519.404052734375,
+      "height": 207.052978515625,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "a1",
+      "roundness": null,
+      "seed": 1709669319,
+      "version": 331,
+      "versionNonce": 1753019847,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1770236704454,
+      "link": null,
+      "locked": false,
+      "text": "1. Create the form visuals using text fields\n2. Extract the form into it's own widget and make\n    the text fields into Text Form Fields\n3. Make the form stateful and add controllers and \n    Submit functionality\n4. Do validation on the form\n\n(5/6 would be creating custom inputs)",
+      "fontSize": 20.7052978515625,
+      "fontFamily": 5,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "1. Create the form visuals using text fields\n2. Extract the form into it's own widget and make\n    the text fields into Text Form Fields\n3. Make the form stateful and add controllers and \n    Submit functionality\n4. Do validation on the form\n\n(5/6 would be creating custom inputs)",
+      "autoResize": true,
+      "lineHeight": 1.25
+    },
+    {
+      "id": "nsuGWDxwP1enHXnPJQYo4",
+      "type": "freedraw",
+      "x": 466.9355773925781,
+      "y": 273.5128631591797,
+      "width": 135.03086853027344,
+      "height": 59.79939270019531,
+      "angle": 0,
+      "strokeColor": "#2f9e44",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "a5",
+      "roundness": null,
+      "seed": 1963530695,
+      "version": 20,
+      "versionNonce": 1125833991,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1770237318772,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -0.2260589599609375,
+          1.31866455078125
+        ],
+        [
+          0.7384490966796875,
+          4.6944427490234375
+        ],
+        [
+          1.70294189453125,
+          7.58795166015625
+        ],
+        [
+          3.1497039794921875,
+          9.999221801757812
+        ],
+        [
+          5.0787200927734375,
+          12.410491943359375
+        ],
+        [
+          5.56097412109375,
+          13.857254028320312
+        ],
+        [
+          6.0432281494140625,
+          13.857254028320312
+        ],
+        [
+          7.9722442626953125,
+          10.481475830078125
+        ],
+        [
+          11.348007202148438,
+          5.6589508056640625
+        ],
+        [
+          17.135040283203125,
+          -1.0926055908203125
+        ],
+        [
+          27.262359619140625,
+          -8.80865478515625
+        ],
+        [
+          55.71528625488281,
+          -21.34722900390625
+        ],
+        [
+          73.55865478515625,
+          -27.134262084960938
+        ],
+        [
+          102.0115966796875,
+          -35.33256530761719
+        ],
+        [
+          116.96142578125,
+          -39.19059753417969
+        ],
+        [
+          131.91128540039062,
+          -44.49537658691406
+        ],
+        [
+          134.8048095703125,
+          -45.942138671875
+        ],
+        [
+          134.8048095703125,
+          -45.942138671875
+        ]
+      ],
+      "pressures": [],
+      "simulatePressure": true,
+      "lastCommittedPoint": [
+        134.8048095703125,
+        -45.942138671875
+      ]
+    }
+  ],
+  "appState": {
+    "gridSize": 20,
+    "gridStep": 5,
+    "gridModeEnabled": false,
+    "viewBackgroundColor": "#ffffff"
+  },
+  "files": {}
+}
