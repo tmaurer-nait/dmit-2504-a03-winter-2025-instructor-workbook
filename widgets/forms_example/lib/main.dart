@@ -61,6 +61,8 @@ class _UserSignupFormState extends State<UserSignupForm> {
   Widget build(BuildContext context) {
     return Form(
       key: _formKey,
+      // Validate automatically
+      autovalidateMode: AutovalidateMode.always,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
