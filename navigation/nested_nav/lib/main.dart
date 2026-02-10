@@ -26,9 +26,11 @@ class MainApp extends StatelessWidget {
             page = HomePage();
             break;
 
-          // TODO: Allow for deep links to settings pages
-          case '/settings/':
-            page = SettingsManager();
+          // This case matches any settings.name that starts with
+          // '/settings'. This allows us to set up deep links
+          case String name when name.startsWith('/settings'):
+            // Pass in everything after /settings as the initial route
+            page = SettingsManager(initialRoute: settings.name!.substring(9));
             break;
           default:
             // This is where you'd traditionally show a 404 page or something
