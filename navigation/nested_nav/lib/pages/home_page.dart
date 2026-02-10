@@ -1,0 +1,19 @@
+import 'package:flutter/material.dart';
+
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(child: Text('This is the Home Page')),
+      // a button that hovers in the bottom right at all times
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.of(context).pushNamed('/settings/');
+        },
+        child: Icon(Icons.settings),
+      ),
+    );
+  }
+}
