@@ -3,9 +3,9 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 
 class DogImage extends StatefulWidget {
-  const DogImage({super.key});
+  const DogImage({super.key, required this.endpoint});
 
-  final endpoint = 'https://dog.ceo/api/breeds/image/random';
+  final String endpoint;
 
   @override
   State<DogImage> createState() => _DogImageState();

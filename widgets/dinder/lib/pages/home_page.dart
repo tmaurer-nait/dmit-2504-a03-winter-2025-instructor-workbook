@@ -8,7 +8,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text('Dinder')),
-      body: Center(child: DogImage()),
+      body: Center(child: DogImage(endpoint: 'https://dog.ceo/api/breeds/image/random')),
     );
   }
 }
