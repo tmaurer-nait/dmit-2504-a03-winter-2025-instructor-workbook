@@ -1,19 +1,29 @@
 import 'package:flutter/material.dart';
 import 'package:dmit2504_a03_w2026/models/todo.dart';
+import 'package:dmit2504_a03_w2026/state/application_state.dart';
 
 class TodoPage extends StatefulWidget {
-  const TodoPage({super.key});
+  const TodoPage({required this.appState, super.key});
+
+  final ApplicationState appState;
 
   @override
   State<TodoPage> createState() => _TodoPageState();
 }
 
 class _TodoPageState extends State<TodoPage> {
-  List<Todo> _todoList = [
-    Todo(description: "complete assignment 3", isComplete: true),
-    Todo(description: "plan project", isComplete: false),
-    Todo(description: "sleep", isComplete: false),
-  ];
+  List<Todo> _todoList = [];
+
+  @override
+  void initState() {
+    super.initState();
+
+    // When we access this page, copy in the todos from the app state
+    // They'll already be loaded in from firestore
+    setState(() {
+      _todoList = widget.appState.todos;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {

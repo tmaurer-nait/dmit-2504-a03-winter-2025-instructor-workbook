@@ -81,7 +81,9 @@ class MainApp extends StatelessWidget {
         if (settings.name == '/todos') {
           // We want to protect the todos route with a simple auth check using our appstate
           if (applicationState.loggedIn) {
-            return MaterialPageRoute(builder: (context) => TodoPage());
+            return MaterialPageRoute(
+              builder: (context) => TodoPage(appState: applicationState),
+            );
           } else {
             // User is not logged in, redirect to the home page
             return MaterialPageRoute(
