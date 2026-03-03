@@ -20,11 +20,21 @@ class HomePage extends StatelessWidget {
             // Every time the app state changes, check the loggedIn status and
             // render the corresponding button
             return appState.loggedIn
-                ? ElevatedButton(
-                    onPressed: () {
-                      Navigator.of(context).pushNamed('/profile');
-                    },
-                    child: Text('Profile Page'),
+                ? Column(
+                    children: [
+                      ElevatedButton(
+                        onPressed: () {
+                          Navigator.of(context).pushNamed('/profile');
+                        },
+                        child: Text('Profile Page'),
+                      ),
+                      ElevatedButton(
+                        onPressed: () {
+                          Navigator.of(context).pushNamed('/todos');
+                        },
+                        child: Text('Todo Page'),
+                      ),
+                    ],
                   )
                 : ElevatedButton(
                     onPressed: () {

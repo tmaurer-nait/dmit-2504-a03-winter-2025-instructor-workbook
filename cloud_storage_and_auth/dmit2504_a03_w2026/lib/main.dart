@@ -1,4 +1,5 @@
 import 'package:dmit2504_a03_w2026/pages/home_page.dart';
+import 'package:dmit2504_a03_w2026/pages/todo_page.dart';
 import 'package:dmit2504_a03_w2026/state/application_state.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_ui_auth/firebase_ui_auth.dart';
@@ -71,6 +72,25 @@ class MainApp extends StatelessWidget {
             }),
           ],
         ),
+      },
+      // When evaluating route destination there is a priority order
+      // 1. home
+      // 2. check routes map
+      // 3. call on generate route
+      onGenerateRoute: (settings) {
+        if (settings.name == '/todos') {
+          // We want to protect the todos route with a simple auth check using our appstate
+          if (applicationState.loggedIn) {
+            return MaterialPageRoute(builder: (context) => TodoPage());
+          } else {
+            // User is not logged in, redirect to the home page
+            return MaterialPageRoute(
+              builder: (context) => HomePage(appState: applicationState),
+            );
+          }
+        }
+        // If route does not exist we should return a 404 here
+        return null;
       },
     );
   }
