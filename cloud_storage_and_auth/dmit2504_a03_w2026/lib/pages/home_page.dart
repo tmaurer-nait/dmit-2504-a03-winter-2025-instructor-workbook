@@ -11,19 +11,29 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: appState.loggedIn
-            ? ElevatedButton(
-                onPressed: () {
-                  Navigator.of(context).pushNamed('/profile');
-                },
-                child: Text('Profile Page'),
-              )
-            : ElevatedButton(
-                onPressed: () {
-                  Navigator.of(context).pushNamed('/sign-in');
-                },
-                child: Text('Sign In Page'),
-              ),
+        // Listenable Builder has 2 parameters
+        // listenable -> the thing that we listen to changes in
+        // builder -> callback builder function that we call whenever the listenable changes
+        child: ListenableBuilder(
+          listenable: appState,
+          builder: (context, _) {
+            // Every time the app state changes, check the loggedIn status and
+            // render the corresponding button
+            return appState.loggedIn
+                ? ElevatedButton(
+                    onPressed: () {
+                      Navigator.of(context).pushNamed('/profile');
+                    },
+                    child: Text('Profile Page'),
+                  )
+                : ElevatedButton(
+                    onPressed: () {
+                      Navigator.of(context).pushNamed('/sign-in');
+                    },
+                    child: Text('Sign In Page'),
+                  );
+          },
+        ),
       ),
     );
   }

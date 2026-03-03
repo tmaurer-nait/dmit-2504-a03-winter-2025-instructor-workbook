@@ -29,9 +29,21 @@ class ApplicationState extends ChangeNotifier {
 
     // Configure ui auth provider to tell it to allow email auth
     FirebaseUIAuth.configureProviders([EmailAuthProvider()]);
+
+    // Whenever the auth user state changes (login or logout)
+    // We will notify all listeners of that change
+    FirebaseAuth.instance.userChanges().listen((user) {
+      // if the user is logged out user will be null
+      if (user == null) {
+        _loggedIn = false;
+      } else {
+        _loggedIn = true;
+      }
+
+      // Once we've updated our state variable we notify any listeners
+      // of the change.
+      // This function is built in to the ChangeNotifier class that we extended
+      notifyListeners();
+    });
   }
-
-  // TODO: Listen to firebase auth status changes
-
-  // TODO: Broadcast changes in loggedIn to listeners
 }
