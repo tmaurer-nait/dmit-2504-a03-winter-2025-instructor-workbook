@@ -23,25 +23,36 @@ class _TodoPageState extends State<TodoPage> {
           // This iterates up to itemcount, adding the returned widget to the screen
           itemBuilder: (context, index) {
             final todo = _todoList[index];
-            return ListTile(
-              title: Text(
-                todo.description,
-                style: TextStyle(
-                  decoration: todo.isComplete
-                      ? TextDecoration.lineThrough
-                      : TextDecoration.none,
+            return Dismissible(
+              key: UniqueKey(),
+              child: ListTile(
+                title: Text(
+                  todo.description,
+                  style: TextStyle(
+                    decoration: todo.isComplete
+                        ? TextDecoration.lineThrough
+                        : TextDecoration.none,
+                  ),
+                ),
+                trailing: Checkbox(
+                  value: todo.isComplete,
+                  onChanged: (value) {
+                    // Update the frontend
+                    setState(() {
+                      todo.isComplete = value!;
+                    });
+                    // TODO: Update the backend
+                  },
                 ),
               ),
-              trailing: Checkbox(
-                value: todo.isComplete,
-                onChanged: (value) {
-                  // Update the frontend
-                  setState(() {
-                    todo.isComplete = value!;
-                  });
-                  // TODO: Update the backend
-                },
-              ),
+              onDismissed: (direction) {
+                // Direction is either left or right (in our case it doesn't matter)
+                setState(() {
+                  // Update frontend
+                  _todoList.removeAt(index);
+                });
+                // TODO: Update the backend
+              },
             );
           },
           itemCount: _todoList.length,

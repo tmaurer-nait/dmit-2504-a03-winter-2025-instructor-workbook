@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:dmit2504_a03_w2026/firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
+// flutter pub add cloud_firestore
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:dmit2504_a03_w2026/models/todo.dart';
 
 import 'package:firebase_ui_auth/firebase_ui_auth.dart';
 // I hide the EmailAuthProvider to prevent import collisions between
@@ -20,6 +23,51 @@ class ApplicationState extends ChangeNotifier {
   var _loggedIn = false;
   bool get loggedIn => _loggedIn;
 
+  // We need to track the logged in user, so we can access their specific todos
+  User? _user;
+  User? get user => _user;
+  set user(User? user) {
+    if (user == null) {
+      throw ArgumentError('User cannot be set to null');
+    }
+    _user = user;
+  }
+
+  // Variable that tracks the current todos for the logged in user
+  List<Todo>? _todos;
+  List<Todo> get todos {
+    if (user == null) {
+      throw StateError('Cannot get todos when user is null');
+    }
+    return _todos ?? [];
+  }
+
+  set todos(List<Todo> todos) {
+    if (user == null) {
+      throw StateError('Cannot set todos when user is null');
+    }
+    _todos = todos;
+  }
+
+  void _fetchTodos() {
+    if (user == null) {
+      throw StateError('Cannot fetch todos when user is null');
+    }
+
+    // Access the firestore instance
+    FirebaseFirestore.instance
+        // Get the doc/collection of docs
+        .collection('/todos/${user!.uid}/todos')
+        .get()
+        // Update the app state to match
+        .then((todoCollection) {
+          // Convert the docs to Todo Models
+          todos = todoCollection.docs
+              .map((doc) => Todo.fromFirestore(doc))
+              .toList();
+        });
+  }
+
   // Initialize connection to firebase, and configure firebase auth settings/listeners
   Future<void> init() async {
     // This connects us to firebase before starting the app
@@ -38,6 +86,10 @@ class ApplicationState extends ChangeNotifier {
         _loggedIn = false;
       } else {
         _loggedIn = true;
+        // Once they log in, save the user value in the app state
+        this.user = user;
+        // Then fetch all their todos and store them in the app state
+        _fetchTodos();
       }
 
       // Once we've updated our state variable we notify any listeners
