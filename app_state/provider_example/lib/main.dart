@@ -9,7 +9,7 @@ void main() {
   // We wrap our entire app in a provider which will "provide"
   // access to our User state object, for any consumers in the tree
   runApp(
-    Provider(
+    ChangeNotifierProvider(
       // Here is where I initialize the state
       create: (context) => User('Stewart', 'Dent'),
       // The state is provided to the main app
