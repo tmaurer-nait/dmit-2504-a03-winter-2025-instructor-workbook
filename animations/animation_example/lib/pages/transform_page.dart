@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:animation_example/pages/animations_page.dart';
 
 import 'dart:math' as math;
 
@@ -50,8 +51,11 @@ class TransformPage extends StatelessWidget {
         ),
       ),
       floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.play_arrow),
         onPressed: () {
-          //NOOP
+          Navigator.of(
+            context,
+          ).push(MaterialPageRoute(builder: (context) => AnimationsPage()));
         },
       ),
     );
