@@ -74,7 +74,18 @@ class _CameraPageState extends State<CameraPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       // Contains the button to navigate to gallery page
-      appBar: AppBar(),
+      appBar: AppBar(
+        actions: [
+          IconButton(
+            onPressed: () {
+              Navigator.of(
+                context,
+              ).push(MaterialPageRoute(builder: (context) => GalleryPage()));
+            },
+            icon: Icon(Icons.photo_album),
+          ),
+        ],
+      ),
       // Camera Preview, showing what the camera sees
       body: Center(child: CameraPreview(_cameraController)),
       // Take a picture button
