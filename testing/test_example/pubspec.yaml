@@ -1,6 +1,6 @@
 name: test_example
 description: "A new Flutter project."
-publish_to: 'none'
+publish_to: "none"
 version: 0.1.0
 
 environment:
@@ -14,6 +14,9 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^6.0.0
+  # flutter pub add "dev:integration_test:{sdk: flutter}"
+  integration_test:
+    sdk: flutter
 
 flutter:
   uses-material-design: true
