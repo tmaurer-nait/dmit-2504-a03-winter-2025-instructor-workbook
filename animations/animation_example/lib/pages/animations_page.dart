@@ -27,12 +27,12 @@ class _AnimationsPageState extends State<AnimationsPage>
     // Create the controller, link to this widgets ticker, and set the duration
     _controller = AnimationController(
       vsync: this,
-      duration: Duration(seconds: 3),
+      duration: Duration(seconds: 6),
     );
     _controller.repeat();
 
     // drive my curved animation off of the controller
-    _animation = _controller.drive(CurveTween(curve: Curves.elasticIn));
+    _animation = _controller.drive(CurveTween(curve: Curves.easeInCubic));
   }
 
   @override
@@ -58,7 +58,10 @@ class _AnimationsPageState extends State<AnimationsPage>
               builder: (context, child) {
                 return Transform.rotate(
                   angle: _controller.value * 2 * math.pi,
-                  child: Text('Rotating', style: TextStyle(fontSize: 30)),
+                  child: ElevatedButton(
+                    onPressed: () {},
+                    child: Text('Button'),
+                  ),
                 );
               },
             ),
@@ -89,8 +92,11 @@ class _AnimationsPageState extends State<AnimationsPage>
               animation: _animation,
               builder: (context, child) {
                 return Transform.translate(
-                  offset: Offset(0, -_animation.value * 200),
-                  child: Text('Rotating', style: TextStyle(fontSize: 30)),
+                  offset: Offset(0, -_animation.value * 400),
+                  child: Text(
+                    'translating',
+                    style: TextStyle(fontSize: 30.0 * _animation.value),
+                  ),
                 );
               },
             ),
@@ -99,6 +105,7 @@ class _AnimationsPageState extends State<AnimationsPage>
               turns: _controller,
               child: Text("Implicit rotation"),
             ),
+            FadeTransition(opacity: _controller, child: Text('Fading')),
           ],
         ),
       ),
