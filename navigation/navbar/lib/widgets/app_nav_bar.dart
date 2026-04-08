@@ -17,7 +17,8 @@ class AppNavBar extends StatelessWidget {
       2 => routeThree,
       _ => routeOne,
     };
-    Navigator.pushReplacementNamed(context, route);
+    Navigator.pushNamed(context, route);
+    // Navigator.pushReplacementNamed(context, route);
   }
 
   @override

@@ -15,10 +15,19 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       initialRoute: AppNavBar.routeOne,
-      routes: {
-        AppNavBar.routeOne: (context) => const PageOne(),
-        AppNavBar.routeTwo: (context) => const PageTwo(),
-        AppNavBar.routeThree: (context) => const PageThree(),
+      onGenerateRoute: (settings) {
+        final Widget page = switch (settings.name) {
+          AppNavBar.routeTwo => const PageTwo(),
+          AppNavBar.routeThree => const PageThree(),
+          _ => const PageOne(),
+        };
+        return PageRouteBuilder(
+          settings: settings,
+          pageBuilder: (_, __, ___) => page,
+          transitionsBuilder: (_, animation, __, child) =>
+              FadeTransition(opacity: animation, child: child),
+          transitionDuration: const Duration(milliseconds: 150),
+        );
       },
     );
   }
